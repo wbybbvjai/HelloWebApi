@@ -8,8 +8,8 @@ namespace WebApp6.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
 
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -28,6 +28,22 @@ namespace WebApp6.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        public string testString = "123";
+        [HttpGet("GetTestString")]
+        public string GetTestString() {
+            try
+            {
+                var a = 1;
+                var b = 2;
+                Console.WriteLine("≤‚ ‘");
+                return "≤‚ ‘"+ testString;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
     }
 }

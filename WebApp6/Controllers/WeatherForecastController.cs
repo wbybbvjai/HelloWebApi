@@ -45,5 +45,11 @@ namespace WebApp6.Controllers
                 throw;
             }
         }
+        string TestMethod1(int a, int b) { 
+            return (a+b).ToString();
+        }
+        string TestMethod2(int a, int b) { 
+            return (a+b).ToString();
+        }
     }
 }
